@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body {
+  padding: 50px;
+  background-color: #3dadadad;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  padding: 0.5rem 0;
+  width: 100%;
+  justify-content: center;
+}
+.list-section {
+  width: 95%;
+}
+.theList {
   display: flex;
   flex-direction: column;
+  margin-left: 1.5rem;
+}
+.list-item {
+  display: flex;
+  margin-bottom: 1rem;
+  height: 2.5rem;
+}
+
+.todoListMain form {
+  display: flex;
+  margin-bottom: 2rem;
+  margin-left: 0.9rem;
+}
+
+.todoListMain .header input {
+  padding: 10px;
+  font-size: 16px;
+  width: 75%;
+  border: 1px solid #fff;
+}
+
+.todoListMain .header button:hover {
+  background-color: #007B;
+  border: 2px solid whitesmoke;
+  cursor: pointer;
+}
+
+.todoListMain .theList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.todoListMain .theList li {
+  color: #333;
+  background-color: rgba(240, 244, 248, 0.5);
+  padding: 4%;
+  display: flex;
+  min-width: 100%;
+  border-radius: 5px;
+  -webkit-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+}
+
+.todoListMain .theList li:hover {
+  background-color: pink;
+  cursor: pointer
+}
+.li-item {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rounded {
+  border-radius: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#add-btn {
+  width: 40px;
+  height: 40px;
+  padding: 6px 0px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.42857;
+  border: 1px solid #fff;
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+  font-weight: 600;
+
+}
+
+#delete-btn {
+font-weight: 600;
+}
+ #done-btn{
+   position: absolute;
+   margin-left: 16rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+  #done-btn:hover {
+  border: 2px solid green;
 }
