@@ -140,7 +140,7 @@ export default class Todo extends Component {
         
             <div className="list-section done-list">
               <ul className="theList">
-                <h2>Done :</h2>
+                {this.state.doneItems.length > 0 && <h2>Done :</h2> }
                 {this.state.doneItems.map (doneItem => {
                   return (
                     <div className="list-item">
