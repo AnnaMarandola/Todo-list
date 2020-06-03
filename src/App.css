@@ -9,7 +9,7 @@ body {
 
 .form {
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 
 .rounded {
@@ -26,7 +26,6 @@ body {
 
 .li-item {
   display: flex;
-  /* justify-content: flex-end; */
   width: 98%;
   margin-left: 1%;
   margin-bottom: 0.5rem;
@@ -36,7 +35,6 @@ body {
 
 .li-item :n-child(2){
  justify-content: flex-end;
- /* background-color: blanchedalmond; */
 }
 
 .chip-set {
@@ -59,10 +57,33 @@ body {
  width: 2rem;
 }
 
-#done-btn {
-  /* margin-top: 0.rem; */
-}
-
 .title-todo .title-done {
   margin-left: 0.5rem;
 }
+h5 {
+  text-align: center;
+  padding: 0.5rem;
+ 
+}
+
+@media only screen and (min-width : 961px){
+.form {
+  width: 32%;
+  margin-left: 34%;
+  margin-top: 5rem;
+}
+.chip-set {
+  height: 2.5rem;
+  position: initial;
+}
+.lists-container {
+  display: flex;
+  justify-content: space-around;
+}
+.list-section {
+  width: 30%;
+}
+h5 {
+  text-align: center;
+}
+  }

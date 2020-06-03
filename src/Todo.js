@@ -81,6 +81,17 @@ export default class Todo extends Component {
     );
   };
 
+  getBack = key => {
+    let todoAgain = this.state.doneItems.find(item => item.key === key);
+    this.setState ({
+      items: [todoAgain].concat(this.state.items)
+    })
+    localStorage.setItem (
+      'items',
+      JSON.stringify([todoAgain].concat(this.state.items))
+    )
+  }
+
   render () {
     console.log ('doneItems', this.state.doneItems);
     console.log ('items', this.state.items);
@@ -95,10 +106,12 @@ export default class Todo extends Component {
               input={this.state.input}
               placeholder={this.state.placeholder}
             />
+          </div>
+          <div className="lists-container">
             <div className="list-section">
               <ul className="theList">
                 {this.state.items.length > 0 &&
-                  <h5 className="title-todo text-secondary">To do :</h5>}
+                  <h5 className="title-todo text-dark">To do :</h5>}
                 {this.state.items.map (item => {
                   return (
                     <div className="list-item">
@@ -147,7 +160,7 @@ export default class Todo extends Component {
             <div className="list-section done-list">
               <ul className="theList">
                 {this.state.doneItems.length > 0 &&
-                  <h5 className="title-done text-success">Done :</h5>}
+                  <h5 className="title-done text-dark">Done :</h5>}
                 {this.state.doneItems.map (doneItem => {
                   return (
                     <div className="list-item">
@@ -170,7 +183,10 @@ export default class Todo extends Component {
                             type="button"
                             id="done-btn"
                             class="btn btn-outline-danger"
-                            // onClick={}
+                            onClick={e => {
+                              this.getBack(doneItem.key);
+                              this.remove(doneItem.key)
+                            }}
                           >
                             <svg width="24" height="24" viewBox="0 0 24 24">
                               {' '}
@@ -195,8 +211,8 @@ export default class Todo extends Component {
               </ul>
             </div>
           </div>
+          </div>
         </div>
-      </div>
     );
   }
 }

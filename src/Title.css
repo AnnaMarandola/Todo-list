@@ -1,9 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
 
 .title-container{
-    /* border-radius: 10px; */
-    /* margin: -2rem 2rem 3rem 3rem; */
-    /* display: flex; */
     margin-bottom: 2rem;
   }
   
@@ -111,4 +108,11 @@ div p:nth-of-type(9){
 @-webkit-keyframes reset {
   0%{}
   100%{}
+}
+
+@media only screen and (min-width : 961px){
+  .title  {
+    height: 10rem;
+
+  }
 }
